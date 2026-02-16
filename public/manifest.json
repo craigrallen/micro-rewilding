@@ -1,0 +1,16 @@
+{
+  "name": "Micro-Rewilding",
+  "short_name": "Rewilding",
+  "description": "Guided outdoor micro-adventures for mental health",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf6f1",
+  "theme_color": "#3d7a3d",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

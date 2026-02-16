@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-earth-50: #faf6f1;
+  --color-earth-100: #f0e8dd;
+  --color-earth-200: #e0d0bb;
+  --color-earth-300: #c9af8e;
+  --color-earth-400: #b08f65;
+  --color-earth-500: #8b6f47;
+  --color-earth-600: #6d5636;
+  --color-earth-700: #5a4630;
+  --color-earth-800: #3d2f20;
+  --color-earth-900: #2a1f15;
+
+  --color-forest-50: #f0f7f0;
+  --color-forest-100: #dceddc;
+  --color-forest-200: #b8dbb8;
+  --color-forest-300: #8bc48b;
+  --color-forest-400: #5fa85f;
+  --color-forest-500: #3d7a3d;
+  --color-forest-600: #2d5e2d;
+  --color-forest-700: #234823;
+  --color-forest-800: #1a351a;
+  --color-forest-900: #112211;
+
+  --color-moss-50: #f4f7f0;
+  --color-moss-100: #e5eddc;
+  --color-moss-200: #c8d8b4;
+  --color-moss-300: #a4bc85;
+  --color-moss-400: #7d9a57;
+  --color-moss-500: #5c7a3a;
+  --color-moss-600: #465e2c;
+  --color-moss-700: #374a23;
+  --color-moss-800: #28361a;
+  --color-moss-900: #1c2512;
+
+  --color-bark: #6d5236;
+  --color-lichen: #a8b88c;
+  --color-sky-soft: #c5d5e4;
+  --color-sunset: #d4956a;
+}
+
+@font-face {
+  font-family: 'Handwritten';
+  src: local('Caveat'), local('Patrick Hand'), local('Comic Sans MS');
+}
+
+body {
+  background-color: var(--color-earth-50);
+  color: var(--color-earth-900);
+  font-family: 'Caveat', 'Patrick Hand', 'Handwritten', system-ui, sans-serif;
+}
+
+/* Hand-drawn border effect */
+.hand-drawn {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+/* Nature texture overlay */
+.nature-texture {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(139, 111, 71, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(61, 122, 61, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(168, 184, 140, 0.05) 0%, transparent 50%);
+}
+
+/* Leaf decoration */
+.leaf-bg::before {
+  content: '🍃';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 1.5rem;
+  transform: rotate(25deg);
+  opacity: 0.6;
+}
+
+/* Animated breathing circle */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Progress bar animation */
+@keyframes grow {
+  from { width: 0; }
+}
+.grow-bar {
+  animation: grow 1s ease-out;
+}
